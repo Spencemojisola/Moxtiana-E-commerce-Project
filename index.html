@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./landingpage.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navlink">
+            <div class="logoside">
+                <a href=""><img src="" alt="">MOXTIANA CLOSET</a>
+                <p>WOMEN</p>
+                <p>MEN</p>
+                <p>KIDS</p>
+            </div>
+
+            <div class="searchside">
+                <input type="search" placeholder="search for product....">
+                <a href=""><i class="fa-regular fa-user"></i>Spence</a>
+                <a href="./otherhtmlfile/login.html">Sign up/Login in</a>
+                <a href="#" onclick="toggleCart()">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span id="cart-count">0</span>
+                </a>
+
+            </div>
+
+        </nav>
+    </header>
+
+    <section class="herosection">
+        <div class="herotext">
+            <h2>This is Moxtiana Closet</h2>
+
+        </div>
+        <div class="shoptext">
+            <a href="">SHOP WOMEN</a>
+            <a href="">SHOP MEN</a>
+        </div>
+        <div class="boxsession">
+            <a href="">New here? <br>Get your first time discount</a>
+            <a href="">World wide delivery</a>
+            <a href="">Easy returns</a>
+
+        </div>
+
+        <div class="newdesigntext">
+            <h2>New Designs</h2>
+
+        </div>
+        <div class="newdesignpictures">
+            <img src="./images/Black and White Minimalist T-Shirt Mockup Facebook Post_Original.PNG" alt="">
+            <img src="./images/c572c1e9-3c8e-4ba5-a006-67a8c9e43a55.jpg" alt="">
+            <img src="./images/IMG_7215.png" alt="">
+            <img src="./images/IMG_9931.JPG" alt="">
+            <img src="./images/IMG_2670.JPG" alt="">
+
+        </div>
+
+
+        <div class="shopwomendesigns">
+            <a href="">Shop Women's Brands</a>
+
+        </div>
+
+        <div class="womendesigns">
+
+
+            <a href="#" class="product-item" data-id="1" data-name="Ankara Roundneck" data-price="8500"
+                data-image="./images/c572c1e9-3c8e-4ba5-a006-67a8c9e43a55.jpg">
+                <img src="./images/c572c1e9-3c8e-4ba5-a006-67a8c9e43a55.jpg" alt="">
+                <p>Description: Ankara Roundneck</p>
+                <p>Price: N8,500</p>
+                <button class="add-to-cart-btn"
+                    onclick="addToCart(1, 'Ankara Roundneck', 8500, './images/c572c1e9-3c8e-4ba5-a006-67a8c9e43a55.jpg')">
+                    Add to cart <i class="fa-solid fa-cart-shopping"></i>
+                </button>
+            </a>
+
+
+            <a href="#" class="product-item" data-id="1" data-name="Ankara Roundneck" data-price="8500"
+                data-image="./images/c572c1e9-3c8e-4ba5-a006-67a8c9e43a55.jpg">
+                <img src="./images/c572c1e9-3c8e-4ba5-a006-67a8c9e43a55.jpg" alt="">
+                <p>Plus-size Roundneck</p>
+                <p>Color: Black, White, Coffee brown</p>
+                <p>Size: 3XL-5XL</p>
+                <p>Price: N9,500</p>
+                <button class="add-to-cart-btn"
+                    onclick="addToCart(1, 'Ankara Roundneck', 8500, './images/c572c1e9-3c8e-4ba5-a006-67a8c9e43a55.jpg')">
+                    Add to cart <i class="fa-solid fa-cart-shopping"></i>
+                </button>
+            </a>
+
+
+            <a href="#" class="product-item" data-id="1" data-name="Ankara Roundneck" data-price="8500"
+                data-image="./images/c572c1e9-3c8e-4ba5-a006-67a8c9e43a55.jpg">
+                <img src="./images/c572c1e9-3c8e-4ba5-a006-67a8c9e43a55.jpg" alt="">
+                <p>Description: Ankara Roundneck</p>
+                <p>Size: M-2XL</p>
+                <p>Price: N8,500</p>
+                <button class="add-to-cart-btn"
+                    onclick="addToCart(1, 'Ankara Roundneck', 8500, './images/c572c1e9-3c8e-4ba5-a006-67a8c9e43a55.jpg')">
+                    Add to cart <i class="fa-solid fa-cart-shopping"></i>
+                </button>
+            </a>
+
+
+            <a href="#" class="product-item" data-id="1" data-name="Ankara Roundneck" data-price="8500"
+                data-image="./images/c572c1e9-3c8e-4ba5-a006-67a8c9e43a55.jpg">
+                <img src="./images/c572c1e9-3c8e-4ba5-a006-67a8c9e43a55.jpg" alt="">
+                <p>Description: Bodysuits</p>
+                <p>Color: Black, White, Coffee brown</p>
+                <p>Size: 6-18</p>
+                <p>Price: N6,500</p>
+                <button class="add-to-cart-btn"
+                    onclick="addToCart(1, 'Ankara Roundneck', 8500, './images/c572c1e9-3c8e-4ba5-a006-67a8c9e43a55.jpg')">
+                    Add to cart <i class="fa-solid fa-cart-shopping"></i>
+                </button>
+            </a>
+
+        </div>
+
+        <div class="shopmendesigns">
+            <a href="">Shop Men's Brands</a>
+
+        </div>
+
+        <div class="mendesigns">
+
+            <a href="#" class="product-item" data-id="1" data-name="Ankara Roundneck" data-price="8500"
+                data-image="./images/c572c1e9-3c8e-4ba5-a006-67a8c9e43a55.jpg">
+                <img src="./images/c572c1e9-3c8e-4ba5-a006-67a8c9e43a55.jpg" alt="">
+                <p>Description: Ankara Roundneck</p>
+                <p>Color: Black, White, Coffee brown</p>
+                <p>Size: S-5XL</p>
+                <p>Price: N8,500</p>
+                <button class="add-to-cart-btn"
+                    onclick="addToCart(1, 'Ankara Roundneck', 8500, './images/c572c1e9-3c8e-4ba5-a006-67a8c9e43a55.jpg')">
+                    Add to cart <i class="fa-solid fa-cart-shopping"></i>
+                </button>
+            </a>
+
+
+            <a href="#" class="product-item" data-id="1" data-name="Ankara Roundneck" data-price="8500"
+                data-image="./images/c572c1e9-3c8e-4ba5-a006-67a8c9e43a55.jpg">
+                <img src="./images/c572c1e9-3c8e-4ba5-a006-67a8c9e43a55.jpg" alt="">
+                <p>Description: Plus-size Roundneck</p>
+                <p>Color: Black, White, Coffee brown</p>
+                <p>Size: 2XL-5XL</p>
+                <p>Price: N9,500</p>
+                <button class="add-to-cart-btn"
+                    onclick="addToCart(1, 'Ankara Roundneck', 8500, './images/c572c1e9-3c8e-4ba5-a006-67a8c9e43a55.jpg')">
+                    Add to cart <i class="fa-solid fa-cart-shopping"></i>
+                </button>
+            </a>
+
+
+            <a href="#" class="product-item" data-id="1" data-name="Ankara Roundneck" data-price="8500"
+                data-image="./images/c572c1e9-3c8e-4ba5-a006-67a8c9e43a55.jpg">
+                <img src="./images/c572c1e9-3c8e-4ba5-a006-67a8c9e43a55.jpg" alt="">
+                <p>Description: Ankara Roundneck</p>
+                <p>Color: Black, White, Coffee brown</p>
+                <p>Size: S-5XL</p>
+                <p>Price: N8,500</p>
+                <button class="add-to-cart-btn"
+                    onclick="addToCart(1, 'Ankara Roundneck', 8500, './images/c572c1e9-3c8e-4ba5-a006-67a8c9e43a55.jpg')">
+                    Add to cart <i class="fa-solid fa-cart-shopping"></i>
+                </button>
+            </a>
+
+
+            <a href="#" class="product-item" data-id="1" data-name="Ankara Roundneck" data-price="8500"
+                data-image="./images/c572c1e9-3c8e-4ba5-a006-67a8c9e43a55.jpg">
+                <img src="./images/c572c1e9-3c8e-4ba5-a006-67a8c9e43a55.jpg" alt="">
+                <p>Description: Bodysuits</p>
+                <p>Color: Black, White, Coffee brown</p>
+                <p>Size: 6-18</p>
+                <p>Price: N6,500</p>
+                <button class="add-to-cart-btn"
+                    onclick="addToCart(1, 'Ankara Roundneck', 8500, './images/c572c1e9-3c8e-4ba5-a006-67a8c9e43a55.jpg')">
+                    Add to cart <i class="fa-solid fa-cart-shopping"></i>
+                </button>
+            </a>
+
+        </div>
+
+        <div id="cart-modal" class="cart-modal" style="display: none;">
+            <div class="cart-content">
+                <span class="close-cart" onclick="toggleCart()">&times;</span>
+                <h2>Shopping Cart</h2>
+                <div id="cart-items"></div>
+                <div class="cart-total">
+                    <strong>Total: N<span id="cart-total">0</span></strong>
+                </div>
+                <button class="checkout-btn" onclick="checkout()">Checkout</button>
+            </div>
+        </div>
+
+    </section>
+
+    <footer>
+        <div class="socialmediahandles">
+            <a href=""><img src="" alt="">Facebook</a>
+            <a href=""><img src="" alt="">Instagram</a>
+            <a href=""><img src="" alt="">TikTok</a>
+
+        </div>
+    </footer>
+
+
+
+
+</body>
+<script src="./landingpage.js"></script>
+
+</html>

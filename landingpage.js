@@ -1,4 +1,4 @@
-// Product data - 
+// Product data
 const products = [
     {
         id: 1,
@@ -71,11 +71,11 @@ const products = [
 // Search functionality
 function searchProducts(query) {
     if (!query || query.trim() === '') {
-        return products; // Return all products if no query
+        return products;
     }
 
     const searchTerm = query.toLowerCase().trim();
-    
+
     return products.filter(product => {
         return (
             product.name.toLowerCase().includes(searchTerm) ||
@@ -88,11 +88,11 @@ function searchProducts(query) {
     });
 }
 
-// Display search results
+// Display the search results
 function displaySearchResults(results, query) {
     const searchResultsContainer = document.getElementById('search-results-container');
     const searchResultsSection = document.getElementById('search-results');
-    
+
     if (results.length === 0) {
         searchResultsContainer.innerHTML = `
             <div class="no-results">
@@ -122,11 +122,11 @@ function displaySearchResults(results, query) {
             </a>
         `).join('');
     }
-    
+
     // Show search results and hide original product sections
     searchResultsSection.style.display = 'block';
     hideOriginalProducts();
-    
+
     // Scroll to results
     searchResultsSection.scrollIntoView({ behavior: 'smooth' });
 }
@@ -137,7 +137,7 @@ function hideOriginalProducts() {
     const menSection = document.querySelector('.mendesigns');
     const womenTitle = document.querySelector('.shopwomendesigns');
     const menTitle = document.querySelector('.shopmendesigns');
-    
+
     if (womenSection) womenSection.style.display = 'none';
     if (menSection) menSection.style.display = 'none';
     if (womenTitle) womenTitle.style.display = 'none';
@@ -150,7 +150,7 @@ function showOriginalProducts() {
     const menSection = document.querySelector('.mendesigns');
     const womenTitle = document.querySelector('.shopwomendesigns');
     const menTitle = document.querySelector('.shopmendesigns');
-    
+
     if (womenSection) womenSection.style.display = 'block';
     if (menSection) menSection.style.display = 'block';
     if (womenTitle) womenTitle.style.display = 'block';
@@ -161,7 +161,7 @@ function showOriginalProducts() {
 function clearSearch() {
     const searchInput = document.getElementById('search-input');
     const searchResults = document.getElementById('search-results');
-    
+
     searchInput.value = '';
     searchResults.style.display = 'none';
     showOriginalProducts();
@@ -171,64 +171,52 @@ function clearSearch() {
 function executeSearch() {
     const searchInput = document.getElementById('search-input');
     const query = searchInput.value.trim();
-    
+
     if (query === '') {
         clearSearch();
         return;
     }
-    
+
     const results = searchProducts(query);
     displaySearchResults(results, query);
 }
 
 // Event listeners for search
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const searchInput = document.getElementById('search-input');
     const searchBtn = document.getElementById('search-btn');
-    
+
     // Search button click
     if (searchBtn) {
         searchBtn.addEventListener('click', executeSearch);
     }
-    
+
     // Enter key press in search input
     if (searchInput) {
-        searchInput.addEventListener('keypress', function(e) {
+        searchInput.addEventListener('keypress', function (e) {
             if (e.key === 'Enter') {
                 executeSearch();
             }
         });
-        
-        // Optional: Search as user types (uncomment if you want live search)
-        /*
-        searchInput.addEventListener('input', function() {
-            const query = this.value.trim();
-            if (query.length > 2) { // Start searching after 3 characters
-                executeSearch();
-            } else if (query.length === 0) {
-                clearSearch();
-            }
-        });
-        */
     }
 });
 
-// Category filtering functions (bonus feature)
+// filter by category
 function filterByCategory(category) {
     const results = products.filter(product => product.category === category);
     displaySearchResults(results, category + ' products');
 }
 
-// Add click handlers for category navigation
-document.addEventListener('DOMContentLoaded', function() {
+//click for category navigation
+document.addEventListener('DOMContentLoaded', function () {
     const womenNav = document.querySelector('.logoside p:nth-child(2)'); // WOMEN
     const menNav = document.querySelector('.logoside p:nth-child(3)'); // MEN
-    
+
     if (womenNav) {
         womenNav.style.cursor = 'pointer';
         womenNav.addEventListener('click', () => filterByCategory('women'));
     }
-    
+
     if (menNav) {
         menNav.style.cursor = 'pointer';
         menNav.addEventListener('click', () => filterByCategory('men'));
@@ -408,12 +396,4 @@ document.addEventListener('DOMContentLoaded', function () {
 window.addEventListener('beforeunload', function () {
     saveCartToStorage();
 });
-
-
-
-
-
-
-
-
 

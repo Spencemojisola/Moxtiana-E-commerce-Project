@@ -249,7 +249,8 @@ body {
     font-size: 0.9rem;
 }
 
-/* Responsive Design */
+/* MEDIA QUERY FOR LOGIN/SIGNUP */
+
 @media (max-width: 768px) {
     .container {
         grid-template-columns: 1fr;

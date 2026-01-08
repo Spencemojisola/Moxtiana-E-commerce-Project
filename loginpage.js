@@ -15,7 +15,7 @@ function validateEmail(email) {
     return emailRegex.test(email);
 }
 
-// Phone validation function
+// Phone-number validation function
 function validatePhone(phone) {
     const phoneRegex = /^[\+]?[1-9][\d]{0,15}$/;
     return phoneRegex.test(phone.replace(/[\s\-\(\)]/g, ''));
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         if (isValid) {
-            // Show loading state
+            // Show the loading state
             const submitBtn = loginForm.querySelector('.auth-btn');
             const originalText = submitBtn.textContent;
             submitBtn.textContent = 'Signing In...';

@@ -341,6 +341,7 @@ header {
         padding: 5px 10px;
         background-color: rgba(255, 255, 255, 0.1);
         border-radius: 4px;
+        display: none;
     }
     
     .searchside {
@@ -593,6 +594,238 @@ header {
 .mendesigns a p {
     color: white;
     font-size: 12px;
+}
+
+/* Media Query for Hero-section at 1024px */
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+    .herotext h2 {
+        font-size: 28px;
+    }
+    
+    .shoptext {
+        gap: 1.5em;
+    }
+    
+    .shoptext a {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+    
+    .boxsession {
+        gap: 1.5em;
+    }
+    
+    .boxsession a {
+        padding: 12px;
+        font-size: 13px;
+    }
+    
+    .newdesignpictures img {
+        width: 180px;
+    }
+    
+    .womendesigns a img {
+        width: 180px;
+    }
+    
+    .mendesigns a img {
+        width: 180px;
+    }
+}
+
+/* Media Query at (320px - 768px) */
+@media screen and (max-width: 768px) {
+    .herotext {
+        margin-top: 120px;
+    }
+    
+    .herotext h2 {
+        font-size: 20px;
+        padding: 0 20px;
+    }
+    
+    .shoptext {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        margin-top: 30px;
+    }
+    
+    .shoptext a {
+        width: 200px;
+        text-align: center;
+        padding: 15px;
+        font-size: 16px;
+    }
+    
+    .boxsession {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        margin-top: 30px;
+        padding: 0 20px;
+    }
+    
+    .boxsession a {
+        width: 250px;
+        text-align: center;
+        padding: 15px;
+        background-color: rgba(66, 6, 6, 0.8);
+        border-radius: 8px;
+        font-size: 14px;
+    }
+    
+    .newdesigntext {
+        margin-top: 30px;
+    }
+    
+    .newdesigntext h2 {
+        font-size: 18px;
+    }
+    
+    .newdesignpictures {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 0 20px;
+    }
+    
+    .newdesignpictures img {
+        width: 280px;
+        max-width: 90%;
+    }
+    
+    .shopwomendesigns {
+        margin-top: 50px;
+    }
+    
+    .shopwomendesigns a {
+        font-size: 16px;
+        padding: 15px 20px;
+    }
+    
+    .womendesigns {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        padding: 0 20px;
+    }
+    
+    .womendesigns a {
+        width: 280px;
+        max-width: 90%;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.3);
+        border-radius: 8px;
+        padding: 15px;
+    }
+    
+    .womendesigns a img {
+        width: 100%;
+        max-width: 250px;
+    }
+    
+    .womendesigns a p {
+        font-size: 14px;
+        margin: 8px 0;
+    }
+    
+    .shopmendesigns {
+        margin-top: 50px;
+    }
+    
+    .shopmendesigns a {
+        font-size: 16px;
+        padding: 15px 20px;
+    }
+    
+    .mendesigns {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        padding: 0 20px;
+    }
+    
+    .mendesigns a {
+        width: 280px;
+        max-width: 90%;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.3);
+        border-radius: 8px;
+        padding: 15px;
+    }
+    
+    .mendesigns a img {
+        width: 100%;
+        max-width: 250px;
+    }
+    
+    .mendesigns a p {
+        font-size: 14px;
+        margin: 8px 0;
+    }
+    
+    .add-to-cart-btn {
+        padding: 12px 20px;
+        font-size: 14px;
+        width: 100%;
+        margin-top: 15px;
+    }
+}
+
+/* Media Query at (320px - 480px) */
+@media screen and (max-width: 480px) {
+    .herotext h2 {
+        font-size: 18px;
+    }
+    
+    .shoptext a {
+        width: 180px;
+        font-size: 14px;
+        padding: 12px;
+    }
+    
+    .boxsession a {
+        width: 220px;
+        font-size: 13px;
+        padding: 12px;
+    }
+    
+    .newdesignpictures img {
+        width: 250px;
+    }
+    
+    .womendesigns a {
+        width: 250px;
+        padding: 12px;
+    }
+    
+    .womendesigns a img {
+        max-width: 220px;
+    }
+    
+    .womendesigns a p {
+        font-size: 13px;
+    }
+    
+    .mendesigns a {
+        width: 250px;
+        padding: 12px;
+    }
+    
+    .mendesigns a img {
+        max-width: 220px;
+    }
+    
+    .mendesigns a p {
+        font-size: 13px;
+    }
+    
+    .shopwomendesigns a,
+    .shopmendesigns a {
+        font-size: 14px;
+        padding: 12px 16px;
+    }
 }
 
 .thefooter {

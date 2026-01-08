@@ -62,10 +62,9 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Simulate API call
             setTimeout(() => {
-                alert('Login successful! (This is a demo)');
                 submitBtn.textContent = originalText;
                 submitBtn.disabled = false;
-                // Here you would typically redirect to dashboard or home page
+                window.location.href = '../index.html';
             }, 1500);
         }
     });
@@ -82,7 +81,6 @@ document.addEventListener('DOMContentLoaded', function() {
         const confirmPassword = document.getElementById('confirm-password').value;
         const termsAccepted = document.querySelector('input[name="terms"]').checked;
         
-        // Clear previous error styling
         clearErrors();
         
         let isValid = true;
@@ -131,10 +129,9 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Simulate API call
             setTimeout(() => {
-                alert('Account created successfully! (This is a demo)');
                 submitBtn.textContent = originalText;
                 submitBtn.disabled = false;
-                // Here you would typically redirect or auto-login the user
+                window.location.href = '../index.html';
             }, 2000);
         }
     });
@@ -299,23 +296,3 @@ function updatePasswordStrength(strengthData) {
     
     inputGroup.appendChild(strengthDiv);
 }
-
-// Social login handlers (placeholder functions)
-document.addEventListener('DOMContentLoaded', function() {
-    const googleBtns = document.querySelectorAll('.google-btn');
-    const facebookBtns = document.querySelectorAll('.facebook-btn');
-    
-    googleBtns.forEach(btn => {
-        btn.addEventListener('click', function() {
-            alert('Google login integration would go here');
-            // Integrate with Google OAuth
-        });
-    });
-    
-    facebookBtns.forEach(btn => {
-        btn.addEventListener('click', function() {
-            alert('Facebook login integration would go here');
-            // Integrate with Facebook Login
-        });
-    });
-});

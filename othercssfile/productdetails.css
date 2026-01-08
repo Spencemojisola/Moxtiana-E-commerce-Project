@@ -1,0 +1,374 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+
+}
+
+.product-detail-section {
+    background-color: black;
+    color: white;
+    padding: 80px 20px 40px;
+    min-height: 100vh;
+}
+
+.breadcrumb {
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+
+.breadcrumb a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    color: white;
+}
+
+.product-detail-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product-images {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.main-image img {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.thumbnail-images {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.thumbnail {
+    width: 80px;
+    height: 80px;
+    border-radius: 4px;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+.thumbnail.active,
+.thumbnail:hover {
+    opacity: 1;
+    border: 2px solid #420606;
+}
+
+.product-info-detail {
+    padding: 20px 0;
+}
+
+.product-info-detail h1 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.product-rating {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.stars {
+    color: #ffd700;
+}
+
+.rating-text {
+    color: #ccc;
+    font-size: 14px;
+}
+
+.product-price {
+    margin-bottom: 30px;
+}
+
+.current-price {
+    font-size: 28px;
+    font-weight: bold;
+    color: #420606;
+}
+
+.original-price {
+    font-size: 20px;
+    color: #888;
+    text-decoration: line-through;
+    margin-left: 15px;
+}
+
+.product-description {
+    margin-bottom: 30px;
+}
+
+.product-description h3 {
+    margin-bottom: 10px;
+    color: #420606;
+}
+
+.product-options {
+    margin-bottom: 30px;
+}
+
+.product-options > div {
+    margin-bottom: 20px;
+}
+
+.product-options h4 {
+    margin-bottom: 10px;
+    color: #420606;
+}
+
+.color-selector {
+    display: flex;
+    gap: 10px;
+}
+
+.color-option {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 3px solid transparent;
+    transition: border-color 0.3s;
+}
+
+.color-option.active {
+    border-color: #420606;
+}
+
+.size-selector {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.size-option {
+    padding: 10px 15px;
+    border: 2px solid #420606;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.size-option.active,
+.size-option:hover {
+    background-color: #420606;
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.quantity-btn {
+    background: #420606;
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.quantity-display {
+    font-size: 18px;
+    font-weight: bold;
+    min-width: 30px;
+    text-align: center;
+}
+
+.product-actions {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.add-to-cart-detail-btn,
+.buy-now-btn {
+    flex: 1;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    min-width: 150px;
+}
+
+.add-to-cart-detail-btn {
+    background: #420606;
+    color: white;
+}
+
+.add-to-cart-detail-btn:hover {
+    background: #660808;
+}
+
+.buy-now-btn {
+    background: transparent;
+    color: white;
+    border: 2px solid #420606;
+}
+
+.buy-now-btn:hover {
+    background: #420606;
+}
+
+.wishlist-btn {
+    padding: 15px;
+    background: transparent;
+    border: 2px solid #420606;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.wishlist-btn:hover {
+    background: #420606;
+}
+
+.product-features {
+    border-top: 1px solid #333;
+    padding-top: 20px;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    color: #ccc;
+}
+
+.feature i {
+    color: #420606;
+    width: 20px;
+}
+
+.related-products {
+    margin-top: 60px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.related-products h3 {
+    color: #420606;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.related-products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.related-product-item {
+    background: rgba(66, 6, 6, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.related-product-item:hover {
+    transform: translateY(-5px);
+}
+
+.related-product-item img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.related-product-item p {
+    margin: 8px 0;
+    font-size: 14px;
+}
+
+/* Media Queries for Product Detail Page */
+@media screen and (max-width: 768px) {
+    .product-detail-section {
+        padding: 120px 15px 40px;
+    }
+    
+    .product-detail-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .product-info-detail h1 {
+        font-size: 24px;
+    }
+    
+    .current-price {
+        font-size: 24px;
+    }
+    
+    .original-price {
+        font-size: 18px;
+    }
+    
+    .product-actions {
+        flex-direction: column;
+    }
+    
+    .add-to-cart-detail-btn,
+    .buy-now-btn {
+        min-width: 100%;
+    }
+    
+    .related-products-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .thumbnail-images {
+        flex-wrap: wrap;
+    }
+    
+    .thumbnail {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .product-info-detail h1 {
+        font-size: 20px;
+    }
+    
+    .size-selector {
+        gap: 8px;
+    }
+    
+    .size-option {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+}

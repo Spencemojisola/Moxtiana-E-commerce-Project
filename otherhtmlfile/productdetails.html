@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Detail - Moxtiana Closet</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../landingpage.css">
+   <link rel="stylesheet" href="../othercssfile/productdetails.css">
+</head>
+<body>
+    <header>
+        <nav class="navlink">
+            <div class="logoside">
+                <a href="../index.html"><img src="" alt="">MOXTIANA CLOSET</a>
+                <p>WOMEN</p>
+                <p>MEN</p>
+                <p>KIDS</p>
+            </div>
+            <div class="searchside">
+                <div class="search-container">
+                    <input type="search" id="search-input" placeholder="search for product....">
+                    <button id="search-btn" type="button">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </div>
+            </div>
+            <div id="search-results" class="search-results" style="display: none;">
+                <h3>Search Results</h3>
+                <div id="search-results-container"></div>
+                <button id="clear-search" onclick="clearSearch()">Show All Products</button>
+            </div>
+            <div class="loginside">
+                <a href="./otherhtmlfile/login.html">Sign up/Login in</a>
+                <a href="#" onclick="toggleCart()">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span id="cart-count">0</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="product-detail-section">
+        <div class="breadcrumb">
+            <a href="../index.html">Home</a> > <span id="product-category">Women</span> > <span id="product-name-breadcrumb">Product</span>
+        </div>
+        
+        <div class="product-detail-container">
+            <div class="product-images">
+                <div class="main-image">
+                    <img id="main-product-image" src="" alt="Product Image">
+                </div>
+                <div class="thumbnail-images">
+                    <img class="thumbnail active" src="" alt="Thumbnail 1">
+                    <img class="thumbnail" src="" alt="Thumbnail 2">
+                    <img class="thumbnail" src="" alt="Thumbnail 3">
+                </div>
+            </div>
+            
+            <div class="product-info-detail">
+                <h1 id="product-title">Product Name</h1>
+                <div class="product-rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <span class="rating-text">(4.0) 25 reviews</span>
+                </div>
+                
+                <div class="product-price">
+                    <span class="current-price" id="product-price">N0</span>
+                    <span class="original-price">N12,000</span>
+                </div>
+                
+                <div class="product-description">
+                    <h3>Description</h3>
+                    <p id="product-description-text">Product description will be loaded here...</p>
+                </div>
+                
+                <div class="product-options">
+                    <div class="color-options">
+                        <h4>Color:</h4>
+                        <div class="color-selector">
+                            <div class="color-option active" data-color="black" style="background-color: black;"></div>
+                            <div class="color-option" data-color="white" style="background-color: white; border: 1px solid #ccc;"></div>
+                            <div class="color-option" data-color="brown" style="background-color: #8B4513;"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="size-options">
+                        <h4>Size:</h4>
+                        <div class="size-selector">
+                            <button class="size-option active" data-size="S">S</button>
+                            <button class="size-option" data-size="M">M</button>
+                            <button class="size-option" data-size="L">L</button>
+                            <button class="size-option" data-size="XL">XL</button>
+                            <button class="size-option" data-size="2XL">2XL</button>
+                        </div>
+                    </div>
+                    
+                    <div class="quantity-selector">
+                        <h4>Quantity:</h4>
+                        <div class="quantity-controls">
+                            <button class="quantity-btn minus" onclick="changeQuantity(-1)">-</button>
+                            <span class="quantity-display" id="quantity">1</span>
+                            <button class="quantity-btn plus" onclick="changeQuantity(1)">+</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-actions">
+                    <button class="add-to-cart-detail-btn" onclick="addToCartFromDetail()">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        Add to Cart
+                    </button>
+                    <button class="buy-now-btn">
+                        Buy Now
+                    </button>
+                    <button class="wishlist-btn">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+                </div>
+                
+                <div class="product-features">
+                    <div class="feature">
+                        <i class="fa-solid fa-truck"></i>
+                        <span>Free worldwide delivery</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fa-solid fa-rotate-left"></i>
+                        <span>Easy returns</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <span>Secure payment</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="related-products">
+            <h3>Related Products</h3>
+            <div class="related-products-grid" id="related-products-container">
+                <!-- Related products will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <div id="cart-modal" class="cart-modal" style="display: none;">
+        <div class="cart-content">
+            <span class="close-cart" onclick="toggleCart()">&times;</span>
+            <h2>Shopping Cart</h2>
+            <div id="cart-items"></div>
+            <div class="cart-total">
+                <strong>Total: N<span id="cart-total">0</span></strong>
+            </div>
+            <button class="checkout-btn" onclick="checkout()">Checkout</button>
+        </div>
+    </div>
+
+    <footer class="thefooter">
+        <div class="socialmediahandles">
+            <a href=""><img src="" alt="">Facebook</a>
+            <a href=""><img src="" alt="">Instagram</a>
+            <a href=""><img src="" alt="">TikTok</a>
+        </div>
+    </footer>
+
+    <script src="../landingpage.js"></script>
+    <script src="../productdetails.js"></script>
+</body>
+</html>

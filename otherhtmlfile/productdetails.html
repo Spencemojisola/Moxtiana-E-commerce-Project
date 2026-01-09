@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,8 +9,9 @@
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../landingpage.css">
-   <link rel="stylesheet" href="../othercssfile/productdetails.css">
+    <link rel="stylesheet" href="../othercssfile/productdetails.css">
 </head>
+
 <body>
     <header>
         <nav class="navlink">
@@ -44,23 +46,32 @@
 
     <section class="product-detail-section">
         <div class="breadcrumb">
-            <a href="../index.html">Home</a> > <span id="product-category">Women</span> > <span id="product-name-breadcrumb">Product</span>
+            <a href="../index.html">Home</a> > <span id="product-category">Women</span> > <span
+                id="product-name-breadcrumb">Product</span>
         </div>
-        
+
         <div class="product-detail-container">
             <div class="product-images">
                 <div class="main-image">
-                    <img id="main-product-image" src="" alt="Product Image">
+                    <img id="main-product-image"
+                        src="../images/Black and White Minimalist T-Shirt Mockup Facebook Post_Original.PNG"
+                        alt="Product Image">
                 </div>
                 <div class="thumbnail-images">
-                    <img class="thumbnail active" src="" alt="Thumbnail 1">
-                    <img class="thumbnail" src="" alt="Thumbnail 2">
-                    <img class="thumbnail" src="" alt="Thumbnail 3">
+                    <img class="thumbnail active"
+                        src="../images/Black and White Minimalist T-Shirt Mockup Facebook Post_Original.PNG"
+                        alt="Thumbnail 1">
+                    <img class="thumbnail"
+                        src="../images/Black and White Minimalist T-Shirt Mockup Facebook Post_Original.PNG"
+                        alt="Thumbnail 2">
+                    <img class="thumbnail"
+                        src="../images/Black and White Minimalist T-Shirt Mockup Facebook Post_Original.PNG"
+                        alt="Thumbnail 3">
                 </div>
             </div>
-            
+
             <div class="product-info-detail">
-                <h1 id="product-title">Product Name</h1>
+                <h1 id="product-title">Customized T-shirt</h1>
                 <div class="product-rating">
                     <div class="stars">
                         <i class="fa-solid fa-star"></i>
@@ -71,27 +82,31 @@
                     </div>
                     <span class="rating-text">(4.0) 25 reviews</span>
                 </div>
-                
+
                 <div class="product-price">
-                    <span class="current-price" id="product-price">N0</span>
+                    <span class="current-price" id="product-price">N9,500</span>
                     <span class="original-price">N12,000</span>
                 </div>
-                
+
                 <div class="product-description">
                     <h3>Description</h3>
-                    <p id="product-description-text">Product description will be loaded here...</p>
+                    <p id="product-description-text">Unisex customized T-shirt <br>100% cotton quality <br>Wear your own
+                        favorite quotes/words</p>
                 </div>
-                
+
                 <div class="product-options">
                     <div class="color-options">
                         <h4>Color:</h4>
                         <div class="color-selector">
                             <div class="color-option active" data-color="black" style="background-color: black;"></div>
-                            <div class="color-option" data-color="white" style="background-color: white; border: 1px solid #ccc;"></div>
-                            <div class="color-option" data-color="brown" style="background-color: #8B4513;"></div>
+                            <div class="color-option" data-color="white"
+                                style="background-color: white; border: 1px solid #ccc;"></div>
+                            <div class="color-option" data-color="brown" style="background-color: #653f24;"></div>
+                            <div class="color-option" data-color="brown" style="background-color: red;"></div>
+                            <div class="color-option" data-color="brown" style="background-color: green;"></div>
                         </div>
                     </div>
-                    
+
                     <div class="size-options">
                         <h4>Size:</h4>
                         <div class="size-selector">
@@ -100,9 +115,11 @@
                             <button class="size-option" data-size="L">L</button>
                             <button class="size-option" data-size="XL">XL</button>
                             <button class="size-option" data-size="2XL">2XL</button>
+                            <button class="size-option" data-size="2XL">3XL</button>
+                            <button class="size-option" data-size="2XL">4XL</button>
                         </div>
                     </div>
-                    
+
                     <div class="quantity-selector">
                         <h4>Quantity:</h4>
                         <div class="quantity-controls">
@@ -112,7 +129,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="product-actions">
                     <button class="add-to-cart-detail-btn" onclick="addToCartFromDetail()">
                         <i class="fa-solid fa-cart-shopping"></i>
@@ -125,7 +142,7 @@
                         <i class="fa-regular fa-heart"></i>
                     </button>
                 </div>
-                
+
                 <div class="product-features">
                     <div class="feature">
                         <i class="fa-solid fa-truck"></i>
@@ -142,11 +159,20 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="related-products">
             <h3>Related Products</h3>
             <div class="related-products-grid" id="related-products-container">
-                <!-- Related products will be loaded here -->
+
+                <img class="thumbnail active"
+                    src="../images/Black and White Minimalist T-Shirt Mockup Facebook Post_Original.PNG"
+                    alt="Thumbnail 1">
+                <img class="thumbnail"
+                    src="../images/Black and White Minimalist T-Shirt Mockup Facebook Post_Original.PNG"
+                    alt="Thumbnail 2">
+                <img class="thumbnail"
+                    src="../images/Black and White Minimalist T-Shirt Mockup Facebook Post_Original.PNG"
+                    alt="Thumbnail 3">
             </div>
         </div>
     </section>
@@ -174,4 +200,5 @@
     <script src="../landingpage.js"></script>
     <script src="../productdetails.js"></script>
 </body>
+
 </html>

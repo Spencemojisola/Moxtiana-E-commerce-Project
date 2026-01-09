@@ -223,20 +223,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Cart functionality
 let cart = [];
 let cartCount = 0;

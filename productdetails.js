@@ -35,16 +35,16 @@ function loadProductDetails() {
         document.getElementById('product-name-breadcrumb').textContent = productName;
         document.getElementById('product-category').textContent = productCategory;
         
-        // Set thumbnails (using same image for demo)
+        //Thumbnails
         const thumbnails = document.querySelectorAll('.thumbnail');
         thumbnails.forEach(thumb => {
             thumb.src = decodeURIComponent(productImage);
         });
         
-        // Set product description based on product name
+        //Product description
         setProductDescription(productName);
         
-        // Load related products
+        //Related products
         loadRelatedProducts();
     }
 }

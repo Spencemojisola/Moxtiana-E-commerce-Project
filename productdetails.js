@@ -105,23 +105,46 @@ function changeQuantity(change) {
     document.getElementById('quantity').textContent = quantity;
 }
 
-function addToCartFromDetail() {
-    if (currentProduct.id) {
-        // Use existing addToCart function from your main script
-        addToCart(
-            currentProduct.id,
-            currentProduct.name,
-            currentProduct.price,
-            currentProduct.image,
-            quantity,
-            selectedColor,
-            selectedSize
-        );
+// function addToCartFromDetail() {
+//     if (currentProduct.id) {
+//         // Use existing addToCart function from your main script
+//         addToCart(
+//             currentProduct.id,
+//             currentProduct.name,
+//             currentProduct.price,
+//             currentProduct.image,
+//             quantity,
+//             selectedColor,
+//             selectedSize
+//         );
         
-        // Show confirmation
-        showNotification('Product added to cart!');
+//         // Show confirmation
+//         showNotification('Product added to cart!');
+//     }
+// }
+
+function addToCart(id, name, price, image) {
+    // Check if item already exists in cart
+    const existingItem = cart.find(item => item.id === id);
+
+    if (existingItem) {
+        // If item exists, increase quantity
+        existingItem.quantity += 1;
+    } else {
+        // If new item, add to cart
+        cart.push({
+            id: id,
+            name: name,
+            price: price,
+            image: image,
+            quantity: 1
+        });
     }
+
+    updateCartDisplay();
+    showAddToCartNotification(name);
 }
+
 
 function showNotification(message) {
     // Create notification element
@@ -180,3 +203,5 @@ function loadRelatedProducts() {
         container.appendChild(productElement);
     });
 }
+
+

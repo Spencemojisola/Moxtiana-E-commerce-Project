@@ -8,7 +8,7 @@ const products = [
         color: "Ankara pattern",
         size: "M-2XL",
         price: 8500,
-        image: "./images/c572c1e9-3c8e-4ba5-a006-67a8c9e43a55.jpg",
+        image: "./images/Ankara Roundneck9.JPG",
         keywords: ["ankara", "roundneck", "women", "shirt", "traditional", "african"]
     },
     {
@@ -19,7 +19,7 @@ const products = [
         color: "Black, White, Coffee brown",
         size: "3XL-5XL",
         price: 9500,
-        image: "./images/c572c1e9-3c8e-4ba5-a006-67a8c9e43a55.jpg",
+        image: "./images/moxtiana pt combo2.png",
         keywords: ["plus-size", "roundneck", "women", "shirt", "large", "big"]
     },
     {
@@ -30,7 +30,7 @@ const products = [
         color: "Black, White, Coffee brown",
         size: "6-18",
         price: 6500,
-        image: "./images/c572c1e9-3c8e-4ba5-a006-67a8c9e43a55.jpg",
+        image: "./images/Bodysuit2.JPG",
         keywords: ["bodysuit", "women", "fitted", "body", "suit"]
     },
     {
@@ -41,7 +41,7 @@ const products = [
         color: "Black, White, Coffee brown",
         size: "S-5XL",
         price: 8500,
-        image: "./images/c572c1e9-3c8e-4ba5-a006-67a8c9e43a55.jpg",
+        image: "./images/Ankara Roundneck7.JPG",
         keywords: ["ankara", "roundneck", "men", "shirt", "traditional", "african", "male"]
     },
     {
@@ -52,7 +52,7 @@ const products = [
         color: "Black, White, Coffee brown",
         size: "2XL-5XL",
         price: 9500,
-        image: "./images/c572c1e9-3c8e-4ba5-a006-67a8c9e43a55.jpg",
+        image: "./images/Moxtiana PT2.png",
         keywords: ["plus-size", "roundneck", "men", "shirt", "large", "big", "male"]
     },
     {
@@ -63,9 +63,21 @@ const products = [
         color: "Black, White, Coffee brown",
         size: "6-18",
         price: 6500,
-        image: "./images/c572c1e9-3c8e-4ba5-a006-67a8c9e43a55.jpg",
+        image: "./images/moxtiana pt combo2.png",
         keywords: ["bodysuit", "men", "fitted", "body", "suit", "male"]
+    },
+    {
+        id: 7,
+        name: "Customized Tees",
+        description: "Bodysuits for Men",
+        category: "men",
+        color: "Black, White, Coffee brown",
+        size: "6-18",
+        price: 9500,
+        image: "./images/kids customized tees2.JPG",
+        keywords: ["customized", "men", "fitted", "tees", "roundneck", "male"]
     }
+    
 ];
 
 // Search functionality
@@ -97,7 +109,7 @@ function displaySearchResults(results, query) {
         searchResultsContainer.innerHTML = `
             <div class="no-results">
                 <p>No products found for "${query}"</p>
-                <p>Try searching for: ankara, roundneck, bodysuit, plus-size, men, women</p>
+                <p>Try searching for: ankara, roundneck, bodysuit, plain, custonized, plus-size, men, women</p>
             </div>
         `;
     } else {
